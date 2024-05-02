@@ -1,0 +1,18 @@
+body{
+    margin: 10%;
+    font-family: 'Tahoma', sans-serif;
+}
+.main{
+    width: 400px;
+    height: 300px;
+
+}
+.valor{
+
+}
+.btn{
+    background-color: rgb(4, 58, 158);
+    color: white;
+    padding: 1%;
+    border-radius: 5px;
+}

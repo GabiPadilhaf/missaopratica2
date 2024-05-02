@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenando</title>
+    <link rel="stylesheet" href="ordenando.css">
+
+</head>
+<body>
+    <div class="main">
+        <h1>Ordenando Valores</h1>
+        <form action="">
+            <div class="valor">
+                <label for="valor" >Valor</label><br>
+                <input type="number" id="valor"><br><br>
+                <input type="button" value="Adicionar" onclick="add()" class="btn"> <br>
+            </div>
+           <hr>
+            <div>
+                <select id="sortMethod" >
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="selection">Selection Sort</option>
+                    <option value="quick">Quick Sort</option>
+                </select><br><br>
+            </div>
+           
+            <div>
+                <input type="button" value="Ordenar" onclick="ordenar()" class="btn">
+                <input type="button" value="Misturar" onclick="misturar()" class="btn">
+            </div>
+            
+            <div>
+                <ul id="valores"></ul>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- <script>
+        function add() {
+            var valorInput = document.getElementById("valor").value;
+            var lista = document.getElementById("valores");
+            var novoItem = document.createElement("li");
+            novoItem.appendChild(document.createTextNode(valorInput));
+            lista.appendChild(novoItem);
+        }
+
+        function ordenar() {
+            var lista = document.getElementById("valores");
+            var items = lista.getElementsByTagName("li");
+            var valores = Array.from(items).map(item => parseInt(item.textContent));
+            valores.sort((a, b) => a - b);
+            lista.innerHTML = valores.reduce((html, valor) => html += `<li>${valor}</li>`, '');
+        }
+
+        function misturar() {
+            var lista = document.getElementById("valores");
+            var items = lista.getElementsByTagName("li");
+            var valores = Array.from(items).map(item => parseInt(item.textContent));
+            shuffle(valores);
+            lista.innerHTML = valores.reduce((html, valor) => html += `<li>${valor}</li>`, '');
+        }
+        
+    </script> -->
+    <script src="ordenando.js"></script>
+</body>
+</html>
